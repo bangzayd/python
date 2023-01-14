@@ -39,3 +39,22 @@ print(t4.time())
 minus = t4 - t3
 
 print(minus)
+################################################
+from datetime import datetime
+import pandas as pd
+import numpy as np
+
+#https://www.w3schools.com/python/module_statistics.asp
+
+df = pd.read_excel('mean.xlsx')
+
+#https://www.skytowner.com/explore/python_datetime_strptime_method
+t1 = pd.to_datetime(df['Response time elapsed'], format='%H:%M:%S')
+
+t2 = pd.to_datetime(df['Resolved Time'], format='%b %d, %Y %H:%M %p')
+
+
+print("Rata-rata respon time :", t1.mean())
+print("Rata-rata resolve :", t2.mean())
+
+
