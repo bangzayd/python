@@ -16,3 +16,6 @@ t4 = pd.to_datetime(df['y'], format='%H:%M:%S')
 
 z = t4 - t3
 print(z)
+
+print(t1.mean())
+print(t2.mean())
